@@ -1,0 +1,6 @@
+commonLabels:
+  app: hello
+
+resources:
+- flask-deploy.yaml
+- flask-svc.yaml
