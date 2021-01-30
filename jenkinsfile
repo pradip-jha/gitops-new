@@ -11,7 +11,9 @@ pipeline {
         }
         stage('Build'){
             steps {
-                sh 'updated jenkinsfile'
+                sh '''
+                echo "Building image"
+                '''
 
             }
         }
