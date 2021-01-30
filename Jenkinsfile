@@ -17,9 +17,11 @@ pipeline {
 
             }
         }
-        stage('Deploy') {
+        stage('Publish') {
             steps {
-                sh 'make publish'
+                sh '''
+                 echo "make publish"
+                '''
             }
         }
     }
