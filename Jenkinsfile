@@ -12,7 +12,9 @@ pipeline {
         stage('Build'){
             steps {
                 sh '''
+                env
                 echo "Building image-new"
+                docker build flask-app/ -t pankaj2934/flask-gitops:"${BUILD_NUMBER}"
                 '''
 
             }
@@ -20,7 +22,7 @@ pipeline {
         stage('Publish') {
             steps {
                 sh '''
-                 echo "make publish"
+                 docker push pankaj2934/flask-gitops:"${BUILD_NUMBER}"
                 '''
             }
         }
